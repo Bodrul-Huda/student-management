@@ -68,7 +68,6 @@ p {
   color: #444;
 }
 
-/* Table Styles */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -95,7 +94,6 @@ table tbody tr:hover {
   background-color: #f1f1f1;
 }
 
-/* Button Styles */
 button {
   display: inline-flex;
   align-items: center;
@@ -109,7 +107,6 @@ button {
   text-decoration: none;
 }
 
-/* Ensuring consistency for both buttons */
 .btn-edit,
 .btn-delete {
   display: inline-flex;
@@ -120,7 +117,7 @@ button {
   border-radius: 5px;
   text-decoration: none;
   color: white;
-  width: 80px; /* Set a fixed width to align them properly */
+  width: 80px;
   text-align: center;
 }
 
@@ -162,7 +159,11 @@ button {
   background-color: #0056b3;
 }
 
-/* Responsive Design */
+.alert.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 10px;
