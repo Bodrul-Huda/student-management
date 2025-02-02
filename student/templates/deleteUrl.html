@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+
+
+<main class="content">
+  
+  <div class="container">
+    <form method="post">{% csrf_token %}
+      <p>Are you sure you want to delete "{{ object }}"?</p>
+      {{ form }}
+      <input style="text-decoration: none; background-color: #ff4d4d; color: white; border: none; border-radius: 8px; padding: 10px 20px; font-size: 16px; cursor: pointer;"   type="submit" value="Confirm">
+    </form>
+  </div>
+</main>
+
+
+
+{% endblock %}
+
+{% block title%} Delete {% endblock %}

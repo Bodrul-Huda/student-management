@@ -1,0 +1,8 @@
+{% extends 'layout.html'%} {% block content %}
+
+<main class="content">
+  <h1>Welcome to the {{app_name | upper}} </h1>
+  <p>Meet the bright and talented students who make up our community</p>
+   {% include "components/table.html" %}
+</main>
+{% endblock %} {% block title%} Home {% endblock %}

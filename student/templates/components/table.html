@@ -1,0 +1,49 @@
+<div class="container">
+  
+  <h1>Student List</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Course</th>
+        {% if show_actions %}
+        <th>Actions</th>
+        {% endif %}
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for students in students%}
+      <tr>
+        <td>{{students.id}}</td>
+        <td>{{students.name}}</td>
+        <td>{{students.email}}</td>
+        <td>{{students.phone}}</td>
+        <td>{{students.course}}</td>
+        {% if show_actions %}
+        <td>
+          <button class="btn-edit">
+            <a href="{% url 'Update_student' pk=students.id %}" >Edit</a>
+          </button>
+          <button class="btn-delete">
+            <a href="{% url 'Delete_student' pk=students.id %}" >Delete</a>
+          </button>
+        </td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+      
+      
+    </tbody>
+  </table>
+  {% if show_actions %}
+  <div class='create'>
+    <button type="button" class="btn">
+    <a href="{% url 'CreateStudent' %}">Add New Student</a>
+    </button>
+  </div>
+  {% endif %}
+</div>
